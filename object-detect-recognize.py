@@ -23,6 +23,7 @@ COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 print("[INFO] loading model...")
 net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
+#Load our image 
 image = cv2.imread(args["image"])
 (h, w) = image.shape[:2]
 blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
@@ -52,6 +53,6 @@ detections = net.forward()
 		cv2.putText(image, label, (startX, y),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
 
-
+#close window
 cv2.imshow("Output", image)
 cv2.waitKey(0)
