@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+ Copyright 2016 The TensorFlow Authors. All Rights Reserved.
+
+ Version 2.0 (the "License");
+ 
+
+<resources>
+    <string name="activity_name_detection">BRG iSEE</string>
+</resources>
